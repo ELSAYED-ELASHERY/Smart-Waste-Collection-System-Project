@@ -1,8 +1,9 @@
-
+  const int  stepPin = 2;
+  const int dirPin = 3;
 void Driver_Stepper_setup {
     //sets the two pins as outputs
     pinMode(stepPin,OUTPUT);
-    pinMode(dirpPin,OUTPUT);
+    pinMode(dirPin,OUTPUT);
 }
 
 void Driver_Stepper_Loop {

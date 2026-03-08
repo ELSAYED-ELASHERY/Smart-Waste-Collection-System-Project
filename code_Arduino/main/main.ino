@@ -1,7 +1,6 @@
 #include "dc_moter.h"
 #include "Driver_Stepper.h"
-  const int  stepPin = 2;
-  const int dirPin = 3;
+
 void setup() {
   // put your setup code here, to run once:
 Driver_Stepper_setup();
