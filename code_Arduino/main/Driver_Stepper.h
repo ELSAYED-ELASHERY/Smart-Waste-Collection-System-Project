@@ -1,6 +1,17 @@
+
 void Driver_Stepper_setup {
-  
+    //sets the two pins as outputs
+    pinMode(stepPin,OUTPUT);
+    pinMode(dirpPin,OUTPUT);
 }
-void driver_setup_loop {
-    
+
+void Driver_Stepper_Loop {
+    digitalWrite(dirPin,HIGH);
+    //makes 200 pulses for making one full cycle rotation 
+    for(int x = 0; x < 200; x++) {
+        digitalWrite(stepPin,HIGH);
+        delayMicroseconds(500);
+        digitalWrite(stepPin,LOW);
+        delayMicroseconds(500);
+    }
 }
