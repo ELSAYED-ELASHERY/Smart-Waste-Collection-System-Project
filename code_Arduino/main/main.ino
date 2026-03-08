@@ -1,5 +1,5 @@
-#inclod"dc_moter.h"
-#inclod"Driver_Stepper.h"
+#include "dc_moter.h"
+#include "Driver_Stepper.h"
 void setup() {
   // put your setup code here, to run once:
 
