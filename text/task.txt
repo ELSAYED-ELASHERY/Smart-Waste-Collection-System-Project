@@ -1,6 +1,6 @@
 tasks of project Smart Waste Collection System Project :
-1 -> Identifying the type of Arduino                 <>
-2 -> Select the tools and we will purchase the tools <>
+1 -> Identifying the type of Arduino                 <DONE>
+2 -> Select the tools and we will purchase the tools <DONE>
 3 -> Work on the design                              <>
 4 -> Work on the Arduino code                        <>
 5 -> Work on the python                              <>
