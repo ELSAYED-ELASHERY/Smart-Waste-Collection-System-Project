@@ -1,0 +1,131 @@
+{
+  "uuid": "acc7612a6f6ef3172a439741a5a7b454",
+  "path": "Offline/New Project",
+  "name": "New Project",
+  "content": "",
+  "created_at": "2026-03-13 04:28:47",
+  "updated_at": "2026-03-13 07:26:12",
+  "stick": "",
+  "documents": [
+    {
+      "uuid": "e5dfa2e63233c5ed1023975ab4ede642",
+      "title": "Sheet_1",
+      "description": "",
+      "docType": "1",
+      "master": "1811e0d5f5136f2bf2e8a02a4ffc61c8",
+      "thumb": "/images/thumb-default.png",
+      "components": {
+        "d652514db66e4ffa841660bc72808eb8": 1,
+        "eedb4f1e654243a2a7e73d310fcbddac": 2,
+        "b0248eb51e084227889f2cb84eab79c4": 4,
+        "a2776a885e3e4cab9681a250bf6b4fe6": 1,
+        "ae9289d2d8944c94832b8f49350a2820": 1,
+        "2ca88d533fb54dea9d665014ab9808c2": 4,
+        "7f31589f062d49d4a0e4b5c4d5f33cc9": 9
+      },
+      "BOM": [
+        [
+          "Value",
+          "Quantity",
+          "Package",
+          "Components",
+          "CustomPara"
+        ],
+        [
+          "1N4007",
+          4,
+          "DO-41_BD2.4-L4.7-P8.70-D0.9-RD",
+          "D1,D2,D3,D4",
+          {
+            "Manufacturer Part": "1N4007",
+            "Manufacturer": "ST(先科)",
+            "Supplier": "LCSC",
+            "Supplier Part": "C106903"
+          }
+        ],
+        [
+          "LED-Blue(0603)",
+          1,
+          "LED-0603",
+          "LED1",
+          {
+            "Manufacturer Part": "19-217/BHC-ZL1M2RY/3T",
+            "Manufacturer": "EVERLIGHT",
+            "Supplier": "LCSC",
+            "Supplier Part": "C72041"
+          }
+        ],
+        [
+          "LED-Red(0603)",
+          1,
+          "LED-0603",
+          "LED2",
+          {
+            "Manufacturer Part": "KT-0603R",
+            "Manufacturer": "Hubei KENTO Elec",
+            "Supplier": "LCSC",
+            "Supplier Part": "C2286"
+          }
+        ],
+        [
+          "1k",
+          4,
+          "R0603",
+          "R1,R2,R3,R4",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "L7805CV_C2895294",
+          1,
+          "TO-220_L7805CV",
+          "U1",
+          {
+            "Manufacturer Part": "L7805CV带散热器",
+            "Manufacturer": "null",
+            "Supplier": "LCSC",
+            "Supplier Part": "C2895294"
+          }
+        ],
+        [
+          "2.1MMJACKTHM",
+          2,
+          "PJ-102A",
+          "U2,U3",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "XY126 3 PIN-5.0",
+          9,
+          "CONN-TH_XY126V-5.0-3P",
+          "U4,U5,U6,U7,U8,U9,U10,U11,U12",
+          {
+            "Manufacturer Part": "XY126 3 PIN-5.0",
+            "Manufacturer": "null",
+            "Supplier": "LCSC",
+            "Supplier Part": "C9900205034"
+          }
+        ]
+      ],
+      "updateTime": 1773379572,
+      "createTime": 1773368928,
+      "histories": [],
+      "created_at": "2026-03-13 04:28:48",
+      "updated_at": "2026-03-13 07:26:12"
+    }
+  ],
+  "sort": [],
+  "title": "New Project",
+  "foldername": "New Project",
+  "schfilename": "New Project.json",
+  "schfilemtime": 1773379572262
+}
