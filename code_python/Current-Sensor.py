@@ -1,37 +1,37 @@
-# استيراد المكتبات اللازمة
-import time                   # لإنشاء تأخيرات
-import board                  # للوصول إلى دبابيس Raspberry Pi
-import busio                  # للتواصل عبر I2C
-import adafruit_ads1x15.ads1115 as ADS    # مكتبة ADS1115
-from adafruit_ads1x15.analog_in import AnalogIn  # قراءة القنوات التناظرية
+# Import required libraries
+import time                   # Used to create delays
+import board                  # Used to access Raspberry Pi pins
+import busio                  # Used for I2C communication
+import adafruit_ads1x15.ads1115 as ADS    # ADS1115 library
+from adafruit_ads1x15.analog_in import AnalogIn  # Used to read analog channels
 
-# إنشاء واجهة I2C (SDA و SCL على Pi)
+# Create the I2C interface (SDA and SCL on Raspberry Pi)
 i2c = busio.I2C(board.SCL, board.SDA)
 
-# تهيئة محول ADS1115
+# Initialize the ADS1115 ADC converter
 ads = ADS.ADS1115(i2c)
 
-# اختيار القناة A0 من ADS1115
+# Select channel A0 on the ADS1115
 channel = AnalogIn(ads, ADS.P0)
 
-# حساسية حساس ACS712 20A
-sensitivity = 0.100   # 100mV لكل أمبير
+# Sensitivity of the ACS712 20A current sensor
+sensitivity = 0.100   # 100mV per Ampere
 
-# جهد الخمول (2.5V عند صفر تيار)
+# Idle voltage (2.5V when current = 0)
 offset_voltage = 2.5
 
-# حلقة لقراءة التيار باستمرار
+# Loop to continuously read the current
 while True:
-    # قراءة الجهد من الحساس
+    # Read voltage from the sensor
     voltage = channel.voltage
 
-    # حساب التيار من الجهد
+    # Calculate current from the measured voltage
     current = (voltage - offset_voltage) / sensitivity
 
-    # طباعة الجهد والتيار
-    print(f"جهد الحساس: {voltage:.3f} V")
-    print(f"التيار المقاس: {current:.3f} A")
+    # Print the sensor voltage and calculated current
+    print(f"Sensor Voltage: {voltage:.3f} V")
+    print(f"Measured Current: {current:.3f} A")
     print("----------------------------")
 
-    # الانتظار ثانية واحدة قبل القراءة التالية
+    # Wait 1 second before the next reading
     time.sleep(1)
