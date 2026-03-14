@@ -11,7 +11,7 @@ const int in2 = 7;   // Motor direction pin 2
 void dc_motor_setup() {
   // Set all the motor control pins to outputs
   pinMode(enA, OUTPUT);
-  pinMode(in1, OUTPUT);
+  pinMode(in1, OUTPUT); 
   pinMode(in2, OUTPUT);
   
   // Turn off motor - Initial state
