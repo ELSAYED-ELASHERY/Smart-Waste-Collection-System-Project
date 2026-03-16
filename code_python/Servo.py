@@ -1,55 +1,55 @@
-# استيراد المكتبات اللازمة
-import RPi.GPIO as GPIO     # مكتبة التحكم في منافذ Raspberry Pi
-import time                 # مكتبة لإضافة تأخير زمني
+# Import required libraries
+import RPi.GPIO as GPIO     # Library used to control Raspberry Pi GPIO pins
+import time                 # Library used to add time delays
 
-# اختيار نظام ترقيم الدبابيس BCM (أي رقم GPIO نفسه)
+# Use BCM pin numbering (GPIO numbers instead of physical pin numbers)
 GPIO.setmode(GPIO.BCM)
 
-# تحديد البن الذي سنوصل عليه السيرفو
+# Define the GPIO pin connected to the servo
 SERVO_PIN = 18
 
-# ضبط البن كمخرج
+# Set the pin as an output
 GPIO.setup(SERVO_PIN, GPIO.OUT)
 
-# إنشاء PWM على البن 18 بتردد 50Hz
-# أغلب السيرفو يعمل على تردد 50
+# Create a PWM signal on pin 18 with a frequency of 50Hz
+# Most servo motors operate at 50Hz
 pwm = GPIO.PWM(SERVO_PIN, 50)
 
-# بدء PWM بقيمة 0
+# Start PWM with a duty cycle of 0
 pwm.start(0)
 
 try:
 
     while True:
 
-        # في السيرفو 360 درجة:
-        # 7.5 تقريباً = توقف
-        # أقل من 7.5 = دوران عكس عقارب الساعة
-        # أكثر من 7.5 = دوران مع عقارب الساعة
+        # For a 360-degree servo:
+        # 7.5 ≈ Stop
+        # Less than 7.5 = Rotate counterclockwise
+        # Greater than 7.5 = Rotate clockwise
 
-        print("السيرفو يدور يمين")
-        pwm.ChangeDutyCycle(9)   # دوران يمين
+        print("Servo rotating right")
+        pwm.ChangeDutyCycle(9)   # Rotate right
         time.sleep(3)
 
-        print("توقف السيرفو")
-        pwm.ChangeDutyCycle(7.5) # توقف
+        print("Servo stopped")
+        pwm.ChangeDutyCycle(7.5) # Stop
         time.sleep(2)
 
-        print("السيرفو يدور شمال")
-        pwm.ChangeDutyCycle(6)   # دوران شمال
+        print("Servo rotating left")
+        pwm.ChangeDutyCycle(6)   # Rotate left
         time.sleep(3)
 
-        print("توقف السيرفو")
-        pwm.ChangeDutyCycle(7.5) # توقف
+        print("Servo stopped")
+        pwm.ChangeDutyCycle(7.5) # Stop
         time.sleep(2)
 
-# عند الضغط على Ctrl+C
+# If the user presses Ctrl+C
 except KeyboardInterrupt:
 
-    # إيقاف PWM
+    # Stop the PWM signal
     pwm.stop()
 
-    # إعادة ضبط جميع المنافذ
+    # Reset all GPIO pins
     GPIO.cleanup()
 
-    print("تم إيقاف البرنامج")
+    print("Program stopped")
