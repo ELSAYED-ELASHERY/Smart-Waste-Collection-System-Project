@@ -1,21 +1,13 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+
 
 
 const int stepPin = 2;
 const int dirPin = 3;
-=======
->>>>>>> 97e58603fa76e9b425144b0d9a83971be54f6284
+
 #include <Arduino.h>
 
 const int stepPin = 2;
 const int dirPin = 3;
-
-<<<<<<< HEAD
-=======
->>>>>>> Omar_Ashraf
->>>>>>> 97e58603fa76e9b425144b0d9a83971be54f6284
 void Driver_Stepper_setup() {
     //sets the two pins as outputs
     pinMode(stepPin,OUTPUT);
